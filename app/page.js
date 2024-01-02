@@ -1,6 +1,34 @@
 import Image from 'next/image'
+import { client } from "../client";
+
 
 export default function Home() {
+  async function getServerSideProps() {
+    const response = await fetch(client.getStorefrontApiUrl(), {
+      body: JSON.stringify({
+        query: GRAPHQL_QUERY,
+      }),
+      // Generate the headers using the private token.
+      headers: client.getPrivateTokenHeaders(),
+      method: 'POST',
+    });
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const json = await response.json();
+    console.log(json)
+    return { props: json };
+  }
+  const GRAPHQL_QUERY = `
+    query {
+      shop {
+        name
+      }
+    }
+  `;
+  getServerSideProps();
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
