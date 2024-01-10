@@ -5,9 +5,9 @@ import {schemaTypes} from './schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'Shopify - headless-organic-test',
+  title: 'studio-organic',
 
-  projectId: 'tf2ofztq',
+  projectId: 'ciyydlfz',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
