@@ -29,6 +29,7 @@ const hiddenDocTypes = (listItem: ListItemBuilder) => {
 export const structure: StructureResolver = (S, context) =>
   S.list()
     .title('Content')
+    .child(S.document().schemaType('header').documentId('header'))
     .items([
       collections(S, context),
       products(S, context),

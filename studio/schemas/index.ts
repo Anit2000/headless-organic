@@ -2,10 +2,10 @@
 import collection from './documents/collection'
 import product from './documents/product'
 import productVariant from './documents/productVariant'
-import layout from './documents/layout'
+import header from './documents/header'
+import footer from './documents/footer'
 
 // objects
-import header from './objects/header'
 import accordion from './objects/accordion'
 import accordionGroup from './objects/accordionGroup'
 import callout from './objects/callout'
@@ -23,13 +23,13 @@ import blockContent from './blocks/blockContent'
 
 export const schemaTypes = [
   // document types
-  layout,
+  header,
+  footer,
   collection,
   product,
   productVariant,
 
   // objects
-  header,
   accordion,
   accordionGroup,
   callout,
