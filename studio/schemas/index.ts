@@ -3,7 +3,7 @@ import collection from './documents/collection'
 import product from './documents/product'
 import productVariant from './documents/productVariant'
 import header from './documents/header'
-import footer from './documents/footer'
+import navigation from './objects/navigation'
 
 // objects
 import accordion from './objects/accordion'
@@ -24,7 +24,6 @@ import blockContent from './blocks/blockContent'
 export const schemaTypes = [
   // document types
   header,
-  footer,
   collection,
   product,
   productVariant,
@@ -41,6 +40,7 @@ export const schemaTypes = [
   shopifyCollectionRule,
   shopifyProduct,
   shopifyProductVariant,
+  navigation,
 
   // block content
   blockContent,
